@@ -1,1 +1,13 @@
 project_id = "efmaihhscsobjspilokj"
+
+[functions.ai-chat]
+verify_jwt = false
+
+[functions.ai-suggest]
+verify_jwt = false
+
+[functions.razorpay-create-order]
+verify_jwt = false
+
+[functions.razorpay-verify]
+verify_jwt = false
