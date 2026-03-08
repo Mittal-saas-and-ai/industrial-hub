@@ -90,7 +90,6 @@ export default function SearchPage() {
             <Input placeholder="Search equipment, parts, consumables..." value={query} onChange={e => setQuery(e.target.value)} className="pl-10" />
           </div>
           <VoiceSearch onResult={(transcript) => setQuery(transcript)} />
-          </div>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden"><Filter className="h-4 w-4" /></Button>
@@ -106,6 +105,7 @@ export default function SearchPage() {
             <Button variant={viewMode === 'grid' ? 'secondary' : 'ghost'} size="icon" onClick={() => setViewMode('grid')}><Grid3X3 className="h-4 w-4" /></Button>
             <Button variant={viewMode === 'list' ? 'secondary' : 'ghost'} size="icon" onClick={() => setViewMode('list')}><List className="h-4 w-4" /></Button>
           </div>
+        </div>
         </div>
 
         {/* AI Suggestions */}
