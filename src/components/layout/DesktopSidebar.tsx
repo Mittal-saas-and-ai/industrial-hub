@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Search, Gavel, ShoppingCart, User, Package, BarChart3, Settings, Plus, Bell } from 'lucide-react';
+import { Home, Search, Gavel, ShoppingCart, User, Package, BarChart3, Settings, Plus, Bell, Factory } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { NavLink } from '@/components/NavLink';
 import { useUser } from '@/contexts/UserContext';
@@ -28,6 +28,7 @@ const mainNav = [
 
 const manageNav = [
   { title: 'Inventory & Analytics', url: '/inventory', icon: BarChart3 },
+  { title: 'Sector Hub', url: '/sectors', icon: Factory },
   { title: 'Create Auction', url: '/create-auction', icon: Plus },
 ];
 
