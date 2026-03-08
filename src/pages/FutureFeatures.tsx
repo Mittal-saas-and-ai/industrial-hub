@@ -6,14 +6,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from 'sonner';
 import { 
   Glasses, Printer, Link2, GraduationCap, 
-  Eye, Cube, Shield, BookOpen, Play, Award,
+  Eye, Box, Shield, BookOpen, Play, Award,
   ArrowRight, Clock, Sparkles
 } from 'lucide-react';
 
 const arvrFeatures = [
   { title: 'AR Equipment Preview', desc: 'Point your camera at your worksite and visualize how heavy equipment fits in your space before renting.', icon: Eye, status: 'beta' },
   { title: 'VR Factory Tours', desc: 'Walk through supplier facilities virtually. Inspect manufacturing quality without travel.', icon: Glasses, status: 'coming-soon' },
-  { title: '3D Part Inspection', desc: 'Rotate and zoom into 3D scans of refurbished parts to verify condition remotely.', icon: Cube, status: 'beta' },
+  { title: '3D Part Inspection', desc: 'Rotate and zoom into 3D scans of refurbished parts to verify condition remotely.', icon: Box, status: 'beta' },
 ];
 
 const printingFeatures = [
