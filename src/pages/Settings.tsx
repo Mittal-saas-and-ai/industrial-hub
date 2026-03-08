@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ThemeToggle } from '@/components/layout/ThemeToggle';
+import { ERPIntegration } from '@/components/settings/ERPIntegration';
 import { Bell, Shield, Globe, Palette, Smartphone, Database, Download } from 'lucide-react';
 import { toast } from 'sonner';
 import { useState } from 'react';
@@ -19,10 +21,16 @@ export default function Settings() {
 
   return (
     <AppLayout>
-      <div className="p-4 md:p-6 max-w-3xl mx-auto space-y-6">
+      <div className="p-4 md:p-6 max-w-4xl mx-auto space-y-6">
         <h1 className="text-2xl font-bold">Settings</h1>
 
-        {/* Appearance */}
+        <Tabs defaultValue="general">
+          <TabsList className="flex-wrap">
+            <TabsTrigger value="general">General</TabsTrigger>
+            <TabsTrigger value="erp"><Database className="h-4 w-4 mr-1" /> ERP Integration</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="general" className="space-y-6 mt-4">
         <Card className="border-border/50">
           <CardHeader className="pb-2">
             <CardTitle className="text-base flex items-center gap-2"><Palette className="h-4 w-4" /> Appearance</CardTitle>
@@ -117,6 +125,13 @@ export default function Settings() {
             </div>
           </CardContent>
         </Card>
+
+          </TabsContent>
+
+          <TabsContent value="erp" className="mt-4">
+            <ERPIntegration />
+          </TabsContent>
+        </Tabs>
 
         <div className="text-center py-4">
           <p className="text-xs text-muted-foreground">InduCycle Hub v2.0 · © 2026 · All rights reserved</p>

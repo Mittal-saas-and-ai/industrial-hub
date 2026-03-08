@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Slider } from '@/components/ui/slider';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { VoiceSearch } from '@/components/search/VoiceSearch';
 import { products, categories, sectors, formatCurrency } from '@/data/mockData';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Search as SearchIcon, Filter, Grid3X3, List, Star, MapPin, Leaf, Sparkles, X } from 'lucide-react';
@@ -88,6 +89,7 @@ export default function SearchPage() {
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input placeholder="Search equipment, parts, consumables..." value={query} onChange={e => setQuery(e.target.value)} className="pl-10" />
           </div>
+          <VoiceSearch onResult={(transcript) => setQuery(transcript)} />
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden"><Filter className="h-4 w-4" /></Button>

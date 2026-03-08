@@ -23,6 +23,7 @@ import Auth from "./pages/Auth";
 import ResetPassword from "./pages/ResetPassword";
 import SectorHub from "./pages/SectorHub";
 import NotFound from "./pages/NotFound";
+import FutureFeatures from "./pages/FutureFeatures";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
               <Route path="/profile" element={<Profile />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/sectors" element={<SectorHub />} />
+              <Route path="/innovation" element={<FutureFeatures />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <AIChatbot />
