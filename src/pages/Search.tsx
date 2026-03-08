@@ -105,8 +105,7 @@ export default function SearchPage() {
             <Button variant={viewMode === 'grid' ? 'secondary' : 'ghost'} size="icon" onClick={() => setViewMode('grid')}><Grid3X3 className="h-4 w-4" /></Button>
             <Button variant={viewMode === 'list' ? 'secondary' : 'ghost'} size="icon" onClick={() => setViewMode('list')}><List className="h-4 w-4" /></Button>
           </div>
-        </div>
-        </div>
+        
 
         {/* AI Suggestions */}
         <div className="flex gap-2 overflow-x-auto pb-3 mb-4 scrollbar-hide">
